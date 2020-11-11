@@ -1,0 +1,17 @@
+.MyListIntro {
+    background: url(../img/bg.jpg) no-repeat top center;
+    background-position-y: -80px;
+    padding-bottom: 90px;
+
+    header {
+        margin-bottom: 65px;
+    }
+
+    .trends__subtitle {
+        margin-bottom: 30px;
+    }
+
+    .trends__items-wrapper {
+        grid-row-gap: 30px;
+    }
+}

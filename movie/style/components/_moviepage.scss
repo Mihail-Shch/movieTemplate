@@ -1,0 +1,143 @@
+main {
+    background: url(../img/MoviePageBg.jpg);
+}
+
+.MovieListInner {
+    margin-top: 150px;
+    display: flex;
+    position: relative;
+}
+
+.MovieList_photo {
+    margin-right: 70px;
+    box-shadow: 0px 32px 80px #000;
+}
+
+.MovieList_desc {
+    width: 58%;
+
+    h2 {
+        @include text(semibold, 36px, uppercase);
+        margin-bottom: 45px;
+    }
+
+    #FirstInfo {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    span, p {
+        color: $text;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    p span {
+        color: #0c8fd3;
+    }
+
+    #FirstText {
+        margin-top: 55px;
+        margin-bottom: 24px;
+    }
+}
+
+.BtnAndStars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    button {
+        @extend %center;
+        @extend %blackBtn;
+        font-size: 12px;
+        padding: 13px 19px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        img {
+            margin-right: 10px;
+        }
+    }
+    .stars-wrapper {
+        @extend %center;
+        justify-content: flex-end;
+        img {
+            margin-right: 5px;
+        }
+        img:nth-of-type(5) {
+            margin-right: 0;
+        }
+        span {
+            display: block;
+            color: #0c8fd3;
+            margin-left: 10px;
+        }
+    }
+}
+
+.MovieTrailer {
+    margin-top: 100px;
+}
+
+.MovieTrailer-inner {
+    @extend %between;
+}
+
+.MovieTrailer__blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.MovieTrailer__blog-item {
+    @extend %center;
+    width: 84%;
+    margin-bottom: 35px;
+}
+
+.MovieTrailer__blog-item:last-child {
+    margin-bottom: 0;
+}
+
+.MovieTrailer__blog-itemDesc {
+    margin-left: 20px;
+}
+
+.MoveBlog__item-title {
+    @include text(medium, 14px, none);
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.MovieBlog__item-Learn {
+    color: #424445;
+    @include text(light, 12px, none);
+}
+
+.MovieBlog__item-Learn:hover {
+    border-bottom: 1px solid #424445;
+    cursor: pointer;
+}
+
+.MovieTrailer__video {
+    position: relative;
+    width: 98%;
+}
+
+.MoviePage-footer {
+    background-color: $footer;
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+

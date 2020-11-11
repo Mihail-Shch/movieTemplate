@@ -1,0 +1,725 @@
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+    background-color: $dark;
+    padding: 0;
+    margin: 0;
+    font-family: light;
+    font-size: 14px;
+    color: #fff;
+}
+
+.btn {
+   font-family: regular;
+   font-size: 14px;
+   border: 0;
+   outline: 0;
+   cursor: pointer;
+   color: #fff;
+}
+
+@mixin text($ff, $fz, $tt) {
+    font-family: $ff;
+    font-size: $fz;
+    text-transform: $tt;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.intro {
+    min-height: 980px;
+    background: url(../img/bg.jpg) no-repeat top center;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    padding-top: 40px;
+    @extend %between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    line-height: .9;
+
+    span {
+        font-family: medium;
+        color: $red;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+
+    li {
+        margin-right: 35px;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    li:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.nav__link:hover,
+.header__login:hover {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.header__searchAndLogin {
+    display: flex;
+    align-items: center;
+}
+
+.header__search-wrapper {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+.header__search {
+    padding-bottom: 4px;
+    background: 0;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid $red;
+    color: #fff;
+}
+
+::placeholder {
+    color: $red;
+}
+
+.header__login {
+    font-family: regular;
+    margin-left: 30px;
+}
+
+.header__button {
+    @extend %redBtn;
+    margin-left: 30px;
+    padding: 12px 28px;
+    box-shadow: none;
+}
+
+.inner {
+    display: flex;
+    margin-top: 50px;
+
+    .inner__left {
+        width: 42%;
+        align-self: center;
+    }
+
+    #introImg {
+        margin-right: 115px;
+    }
+
+    span {
+        font-family: regular;
+        padding: 1px 10px;
+        border-radius: 1px;
+        text-transform: uppercase;
+    }
+
+    span:nth-of-type(1) {
+        background-color: $yellow;
+    }
+
+    span:nth-of-type(2) {
+        background-color: $blue;
+        margin: 0 10px;
+    }
+
+    span:nth-of-type(3) {
+        background-color: $orange;
+    }
+
+    h2 {
+        @include text(semibold, 60px, uppercase);
+        line-height: .8;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .inner__text {
+        color: $text;
+        margin-bottom: 45px;
+        line-height: 1.6;
+    }
+
+    .inner__buttons-wrapper {
+        display: flex;
+    }
+
+    .inner__button {
+        font-size: 12px;
+        padding: 13px 15px;
+        text-transform: uppercase;
+    }
+
+    button:nth-of-type(1) {
+        @extend %center;
+        @extend %redBtn;
+        margin-right: 20px;
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    button:nth-of-type(2) {
+        @extend %center;
+        @extend %blackBtn;
+        padding: 13px 19px;
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .AvengersPhoto {
+        box-shadow: 30px 40px 60px #000;
+    }
+
+}
+
+.intro__series-subtitle {
+    @include text(light, 14px, uppercase);
+    color: #b0b0b0;
+    display: block;
+    margin-top: 30px;
+
+}
+
+.intro__slider {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+
+    .swiper-container2 {
+        overflow: hidden;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 30px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #484a4c;
+        outline: none;
+    }
+
+    .swiper-button-prev {
+        left: -50px;
+    }
+
+    .swiper-button-next {
+        right: -40px;
+    }
+}
+
+/* .trailer */
+
+.trailer {
+    min-height: 557px;
+    background: url(../img/bg2.jpg) no-repeat center center;
+    padding: 48px 0;
+
+    .inner {
+        margin-top: 35px;
+    }
+
+    .inner__left {
+        width: 59%;
+    }
+}
+
+.inner {
+    justify-content: space-between;
+    @extend %center;
+}
+
+.inner__left {
+    margin-right: 35px;
+    width: 58%;
+    position: relative;
+}
+
+.playBlock {
+    width: 70px;
+    height: 50px;
+    background-color: #211e1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+
+.playBlock:hover {
+    background-color: $red;
+}
+
+.inner__right {
+    width: 41%;
+    text-align: right;
+    position: relative;
+
+    h2 {
+        @include text(semibold, 36px, uppercase);
+    }
+
+    .inner__buttons-wrapper {
+        justify-content: flex-end;
+    }
+}
+
+
+/* /.trailer */
+
+/* .trends */
+
+.trends {
+    background-color: $dark;
+    padding: 50px 0;
+}
+
+.trends__advert-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.trends__subtitle {
+    @include text(light, 14px, uppercase);
+    color: #b0b0b0;
+    display: block;
+}
+
+/* .swiper */
+
+.trends__slider {
+    position: relative;
+
+    .swiper-container {
+       margin-top: 35px;
+       margin-bottom: 50px;
+       width: 950px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        background-color: #15202b;
+        color: #fff;
+        @include text(12px, regular, none);
+        border-radius: 30px;
+        padding: 7px 5px;
+        cursor: pointer;
+    }
+
+    .slide-active {
+        background-color: $red;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 15px;
+    }
+
+    .swiper-button-prev {
+        left: 45px;
+    }
+
+    .swiper-button-next {
+        right: 45px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #484a4c;
+        outline: none;
+    }
+
+}
+
+
+
+.trends__items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 15px;
+}
+
+.trends__item img:hover {
+    cursor: pointer;
+}
+
+.item__title {
+    display: block;
+    margin: 20px 0;
+}
+
+.item__footer {
+    @extend %between;
+}
+
+.item__year {
+    color: $year;
+}
+
+.icons-wrapper {
+    @extend %between;
+}
+
+.item__eye-photo {
+    margin: 0 12px;
+}
+
+.film-score {
+    color: $star;
+    margin-left: 5px;
+    font-size: 13px;
+    font-family: medium;
+}
+
+.imgTrend {
+    width: 100%;
+}
+
+.LoadBtn {
+    background-color: #15202b;
+    padding: 12px 20px;
+    border-radius: 20px;
+    @extend %center;
+    margin: 0 auto;
+    margin-top: 45px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    img {
+        margin-right: 10px;
+    }
+}
+
+/* /.trends */
+
+/* .Venom */
+
+.Venom {
+    padding: 37px 0;
+    background: url(../img/VenomBG.jpg) no-repeat center center;
+    min-height: 557px;
+
+    .inner__left {
+        width: 40%;
+        margin-right: 0;
+
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    .inner__right {
+        width: 58%;
+    }
+}
+
+/* .blogs */
+
+.blogs {
+    padding: 48px 0;
+    background-color: #020d18;
+
+    .trends__advert-wrapper {
+        margin-bottom: 80px;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__left {
+        display: flex;
+    }
+
+    &__photo-wrapper {
+        align-self: center;
+    }
+
+    &__left::after {
+        content: "";
+        height: 500px;
+        width: 1px;
+        background-color: $year;
+        display: inline-block;
+    }
+
+    .hunger__desc {
+        align-self: center;
+        margin: 0 30px;
+        width: 59%;
+    }
+
+    .hunger__title {
+        @include text(semibold, 36px, uppercase);
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .hunger__text {
+        @include text(light, 14px, none);
+        line-height: 1.6;
+        margin-bottom: 25px;
+        color: $text;
+    }
+
+    .hunger__continue-wrapper {
+        @include text(regular, 14px, none);
+        color: #fff;
+        @extend %center;
+        width: 145px;
+
+        img {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .hunger__continue-wrapper:hover span {
+        cursor: pointer;
+        border-bottom: 1px solid #fff;
+    }
+
+    &__right {
+        width: 79%;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item {
+        @extend %center;
+        margin-bottom: 35px;
+
+        img {
+            margin-right: 20px;
+        }
+
+        .blogs__item-title {
+            @include text(medium, 14px, none);
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .blogs__item-subtitle {
+            color: #424445;
+            @include text(light, 12px, none);
+        }
+
+        .blogs__item-subtitle:hover {
+            border-bottom: 1px solid #424445;
+            cursor: pointer;
+        }
+    }
+
+    .blogs__item:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+  .blogs__posters {
+        margin-top: 80px;
+        @extend %between;
+        margin-bottom: 50px;
+
+        .blogs__posters-item {
+            width: 23%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .blogs__posters-item:first-child {
+            background: url(../img/suicide.png) no-repeat center center;
+
+            .blogs__posters-item-title-wrapper {
+                padding-left: 8px;
+            }
+        }
+
+        .blogs__posters-item:nth-of-type(2) {
+            background: url(../img/Joker.png) no-repeat center center;
+
+            .blogs__posters-item-title-wrapper {
+                padding-left: 13px;
+            }
+        }
+
+        .blogs__posters-item:nth-of-type(3) {
+            background: url(../img/CaptainMarvel.png) no-repeat center center;
+
+            .blogs__posters-item-title-wrapper {
+                padding-left: 8px;
+            }
+        }
+
+        .blogs__posters-item:last-child {
+            background: url(../img/AvEndGame.png) no-repeat center center;
+        }
+
+        .blogs__posters-item-title-wrapper {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 4px;
+        }
+
+        .blogs__posters-item-title {
+            line-height: 1.7;
+            @include text(medium, 14px, none);
+        }
+}
+
+/* /.blogs */
+
+/* .footer */
+
+.footer {
+    background-color: $footer;
+    padding: 52px 0;
+
+    &__title {
+        color: $text;
+    }
+
+    &__inner {
+        @extend %between;
+    }
+
+    &__left {
+        width: 26%;
+        align-self: flex-start;
+    }
+
+    &__logo {
+        @extend %center;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        @include text(regular, 26px, uppercase);
+        margin-left: 25px;
+        color: #595959;
+    }
+
+    &__copyright {
+        color: #adadad;
+        @include text(medium, 14px, none);
+        line-height: 1.5;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    &__stars-title {
+        color: $text;
+    }
+
+    &__stars-wrapper {
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    &__star {
+        width: 40px;
+        height: 40px;
+        background-color: $ftrStar;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        img {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+    }
+
+    &__star:last-child {
+        margin-right: 0;
+    }
+
+    &__icons-wrapper {
+
+        img {
+            margin-right: 12px;
+        }
+    }
+
+    &__categories--wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin-right: 60px;
+            list-style-type: none;
+
+            li {
+                margin-bottom: 15px;
+            }
+
+            li a {
+                color: #848282;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                border-bottom: 1px solid #848282;
+            }
+        }
+
+        #LastCategory {
+            margin-right: 0;
+        }
+    }
+
+
+}
